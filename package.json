@@ -9,19 +9,27 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@datastax/astra-db-ts": "^0.1.4",
+    "@vercel/blob": "^0.22.1",
+    "ai": "^2.2.36",
+    "d3-dsv": "^2.0.0",
+    "langchain": "^0.1.21",
+    "next": "14.1.0",
+    "openai": "^4.28.0",
+    "pdf-parse": "^1.1.1",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.1.0"
+    "react-markdown": "^9.0.1"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.0.1",
+    "eslint": "^8",
+    "eslint-config-next": "14.1.0",
     "postcss": "^8",
     "tailwindcss": "^3.3.0",
-    "eslint": "^8",
-    "eslint-config-next": "14.1.0"
+    "typescript": "^5"
   }
 }

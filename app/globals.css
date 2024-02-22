@@ -2,32 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+::-webkit-scrollbar {
+  width: 8px;
+  display: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+/* Track */
+::-webkit-scrollbar-track {
+  background: theme("colors.stone.800");
+  border-radius: 8px;
+  padding-top: 24rem;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: theme("colors.stone.700");
+  border-radius: 8px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: theme("colors.stone.600");
+}
+
+ol {
+  list-style-type: decimal;
+  margin: revert;
+  padding: revert;
+}
+
+ul,
+menu {
+  list-style-type: disc;
+  margin: revert;
+  padding: revert;
+}
+
+@keyframes fadeInFromAbove {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
   }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
