@@ -48,6 +48,8 @@ export default function FileUploadPage() {
    */
   async function processFile(file: File) {
     setWrongFileType(false);
+    setFileSizeFlag(false);
+    setHasError(false);
 
     if (!file) {
       return;
